@@ -1,0 +1,28 @@
+{
+	"name": "project-template",
+	"version": "1.0.0",
+	"description": "",
+	"license": "AGPL-3.0-only",
+	"author": "MaddyUnderStars",
+	"type": "module",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"fmt": "oxfmt",
+		"lint": "oxlint",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@types/node": "^26.1.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.0.8",
+		"oxfmt": "^0.58.0",
+		"oxlint": "^1.73.0",
+		"oxlint-tsgolint": "^0.24.0",
+		"typescript": "^7.0.2"
+	},
+	"lint-staged": {
+		"*.{ts,js,md,tsx,jsx,css}": "oxlint --no-error-on-unmatched-pattern",
+		"*": "oxfmt --no-error-on-unmatched-pattern"
+	}
+}
